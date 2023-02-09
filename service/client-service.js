@@ -41,10 +41,19 @@ const eliminarCliente = (id) => {
   
 };
 
+const detalleCliente = (id) => {
+  return fetch(`http://localhost:3000/perfil/${id}`).then((respuesta) => 
+  /* se convierte la respuesta en un json */
+  respuesta.json()
+  );
+   
+};
+
 //aquí se exportan las funciones con las que se quiere trabajar
 export const clientServices = {
   listaClientes,
   crearCliente,
   eliminarCliente,
+  detalleCliente,
 };
 
