@@ -32,9 +32,19 @@ const crearCliente = (nombre, email) => {
   });
 };
 
+/* Se crea la lógica de la función eliminar clientServices, para este caso se usa el metodo Delete y usando los backticks se agrega el id a la url*/ 
+const eliminarCliente = (id) => {
+  console.log("eliminar a ----->" + id)
+  return fetch(`http://localhost:3000/perfil/${id}`,{
+    method:"DELETE",
+  });
+  
+};
+
 //aquí se exportan las funciones con las que se quiere trabajar
 export const clientServices = {
   listaClientes,
   crearCliente,
+  eliminarCliente,
 };
 

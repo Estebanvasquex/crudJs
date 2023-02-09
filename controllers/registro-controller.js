@@ -11,9 +11,7 @@ formulario.addEventListener("submit", (evento) => {
     //se captura el valor de los input
     const nombre = document.querySelector("[data-nombre]").value;
     const email = document.querySelector("[data-email]").value;
-
-    console.log(nombre + "------" + email);
-
+    
     clientServices.crearCliente(nombre, email).then(respuesta =>{
         //si la respuesta es ok se llama la pantalla  de registro completado
         window.location.href = "/screens/registro_completado.html"
